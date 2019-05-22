@@ -10,10 +10,21 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<style>
 			body, html {
-				background: #EEE;
+				background: #EFEFEF;
 			}
 			#main > .row {
-				padding-top: 40px;
+				padding-top: 20px;
+			}
+			iframe {
+				width: 100%;
+				min-height: 400px;
+				max-height: 600px;
+				border: none;
+				outline: none;
+				overflow: hidden;
+			}
+			pre {
+				padding-bottom: 24px;
 			}
 			
 		</style>
@@ -30,20 +41,15 @@
 					
 					<div class="jumbotron">
 						<h2>Event info</h2>
-						<h3>Status: 
-							<span class="glyphicon glyphicon-ok success fade out"></span>
-							<span class="glyphicon glyphicon-remove fail fade in"></span>
-							</h3>
-						<pre id="eventInfo">
-						</pre>
+						<div id="eventInfo"></div>
 					</div>
 				</div>
 			</div> <!-- /.row -->
 			
 			<div class="row">
 				
-				<div class="embed-responsive embed-responsive-4by3">
-					<iframe class="embed-responsive-item" src="iframe.html"></iframe>
+				<div class="">
+					<iframe class="" src="iframe.html" scrolling="false"></iframe>
 				</div>
 				
 			</div> <!-- /.row -->
@@ -54,8 +60,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		
+		<script>
+			/* for demo only */
+			var notify = function( event ) {
+				console.log(JSON.stringify(event));
+				jQuery('#eventInfo').append( '<h5>'+event.event+'</h5><pre>' + JSON.stringify(event) + '</pre>');
+				
+			}
+		</script>
+		<script src="/assets/parent-scripts.js"></script>
 		
-		<!-- <script src="js/plugins.js"></script> -->
 
 	</body>
 </html>

@@ -8,7 +8,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		
+		<style>
+			body, html {
+				background: #FFF;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -21,7 +25,7 @@
 			
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
-					<form id="emailForm" class="form" name="register">
+					<form id="emailForm" class="form" name="register" method="get" action="iframe-thanks.html">
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label>
 							<input type="email" class="form-control" id="email" name="email" placeholder="Email">
@@ -41,13 +45,11 @@
 			</div> <!-- /.row -->
 			
 		</div> <!-- /.container -->
-			
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		
 		
-		<!-- <script src="js/plugins.js"></script> -->
-
+		<script src="/assets/iframe-scripts.js"></script>
+		<script>
+			post_message('view', 'the user viewed the page, which contains an iframe');
+		</script>
 	</body>
 </html>

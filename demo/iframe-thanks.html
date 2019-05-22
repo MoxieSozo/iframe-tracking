@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>MX iFrame</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		
+		<style>
+			body, html {
+				background: #FFF;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<h1 class="h2">Thanks!</h1>
+					<p>The form was submitted and event was passed to the parent frame.</p>
+					<p>You should see an event logged above called "custom.postMessage.submitted" which contains all of the form data that was submitted in the custom_data property.</p>
+				</div>
+			</div> <!-- /.row -->
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+					<h2>Now, let's celebrate!</h2>
+					
+					<img src="/assets/celebrate.gif" class="img-responsive" style="margin: 0 auto;">
+				</div>
+			</div> <!-- /.row -->
+			
+			
+		</div> <!-- /.container -->
+		
+		
+		<script src="/assets/iframe-scripts.js"></script>
+		<script> 
+			post_message('submitted', window.location.search );
+		</script>
+
+	</body>
+</html>

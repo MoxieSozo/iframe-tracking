@@ -8,10 +8,14 @@ This can be accomplished either through GTM containers or direct file access.
 
 ## How to use
 
-See demos for examples.
+Instructions coming soon.
 
 
 ## Demo
+
+An example using direct implmentation (without GTM) can be viewed [here](#).
+
+## Files
 
 **/demo/index.html** - parent frame
 **/demo/frame.html** - iframe
